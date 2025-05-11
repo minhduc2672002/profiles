@@ -43,6 +43,31 @@ try {
   console.log(chalk.red('❌ Không thể đọc file next.config.js'));
 }
 
+// Kiểm tra GitHub Actions workflow
+const workflowPath = path.join(process.cwd(), '.github/workflows/deploy.yml');
+try {
+  const workflowContent = fs.readFileSync(workflowPath, 'utf8');
+  // Kiểm tra phiên bản upload-pages-artifact
+  if (workflowContent.includes('actions/upload-pages-artifact@v2')) {
+    console.log(chalk.yellow('⚠️ Phát hiện phiên bản cũ của upload-pages-artifact (v2) trong workflow. Nên cập nhật lên v3.'));
+  } else if (workflowContent.includes('actions/upload-pages-artifact@v3')) {
+    console.log(chalk.green('✓ Sử dụng phiên bản mới của upload-pages-artifact (v3) trong workflow.'));
+  } else {
+    console.log(chalk.yellow('⚠️ Không tìm thấy cấu hình upload-pages-artifact trong workflow.'));
+  }
+  
+  // Kiểm tra phiên bản deploy-pages
+  if (workflowContent.includes('actions/deploy-pages@v2')) {
+    console.log(chalk.yellow('⚠️ Phát hiện phiên bản cũ của deploy-pages (v2) trong workflow. Nên cập nhật lên v4.'));
+  } else if (workflowContent.includes('actions/deploy-pages@v4')) {
+    console.log(chalk.green('✓ Sử dụng phiên bản mới của deploy-pages (v4) trong workflow.'));
+  } else {
+    console.log(chalk.yellow('⚠️ Không tìm thấy cấu hình deploy-pages trong workflow.'));
+  }
+} catch (err) {
+  console.log(chalk.red('❌ Không thể đọc file GitHub Actions workflow.'));
+}
+
 // Kiểm tra thư mục public
 if (fs.existsSync('public')) {
   console.log(chalk.green('✓ Thư mục public tồn tại'));
