@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const About = () => {
   const pathname = usePathname();
-  const basePath = pathname.startsWith('/profiles') ? '/profiles' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/profiles' : '';
 
   return (
     <section id="about" className="section bg-gradient-to-br from-background to-blue-50 pt-32 pb-20 md:pt-40 md:pb-28">
@@ -78,17 +78,17 @@ const About = () => {
               <a 
                 href={`${basePath}/[Data_Engineer] - Tran_Minh_Duc.pdf`}
                 download 
-                className="btn-primary inline-flex items-center"
+                className="btn-primary inline-flex items-center mr-4"
               >
                 <FaDownload className="mr-2" /> Download CV
               </a>
               <Link 
-                href={`${basePath}/view-cv`}
-                className="btn-secondary inline-flex items-center"
+                href="/view-cv"
+                className="btn-secondary inline-flex items-center mr-4"
               >
                 <FaEye className="mr-2" /> View CV
               </Link>
-              <Link href="#contact" className="btn-primary">
+              <Link href="#contact" className="btn-primary mr-4">
                 Contact Me
               </Link>
               <Link href="#projects" className="btn-secondary">

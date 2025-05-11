@@ -8,7 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const basePath = pathname.startsWith('/profiles') ? '/profiles' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/profiles' : '';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +31,7 @@ const Header = () => {
       ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container-custom flex justify-between items-center">
-        <Link href={`${basePath}/`} className="text-xl font-bold text-primary">Tran Minh Duc</Link>
+        <Link href="/" className="text-xl font-bold text-primary">Tran Minh Duc</Link>
         
         {/* Mobile menu button */}
         <button
@@ -70,7 +70,7 @@ const Header = () => {
           <Link href="#skills" className="hover:text-primary">Skills</Link>
           <Link href="#projects" className="hover:text-primary">Projects</Link>
           <Link href="#education" className="hover:text-primary">Education</Link>
-          <Link href={`${basePath}/view-cv`} className="hover:text-primary">View CV</Link>
+          <Link href="/view-cv" className="hover:text-primary">View CV</Link>
           <Link href="#contact" className="hover:text-primary">Contact</Link>
         </nav>
       </div>
@@ -83,7 +83,7 @@ const Header = () => {
           <Link href="#skills" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">Skills</Link>
           <Link href="#projects" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">Projects</Link>
           <Link href="#education" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">Education</Link>
-          <Link href={`${basePath}/view-cv`} onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">View CV</Link>
+          <Link href="/view-cv" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">View CV</Link>
           <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary">Contact</Link>
         </nav>
       )}

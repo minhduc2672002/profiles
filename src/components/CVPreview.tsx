@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 import { FaDownload, FaExternalLinkAlt } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 const CVPreview = () => {
+  const pathname = usePathname();
+  const basePath = process.env.NODE_ENV === 'production' ? '/profiles' : '';
+
   return (
     <section id="cv" className="section bg-white">
       <div className="container-custom">
@@ -20,7 +24,7 @@ const CVPreview = () => {
             </div>
             <div className="flex gap-4">
               <a 
-                href="/[Data_Engineer] - Tran_Minh_Duc.pdf" 
+                href={`${basePath}/[Data_Engineer] - Tran_Minh_Duc.pdf`}
                 download 
                 className="btn-primary inline-flex items-center"
               >

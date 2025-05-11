@@ -8,13 +8,13 @@ import { usePathname } from 'next/navigation';
 export default function ViewCV() {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
-  const basePath = pathname.startsWith('/profiles') ? '/profiles' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/profiles' : '';
 
   return (
     <main className="min-h-screen bg-gray-100 py-16">
       <div className="container-custom">
         <div className="flex justify-between items-center mb-8">
-          <Link href={`${basePath}/`} className="flex items-center text-primary hover:underline">
+          <Link href="/" className="flex items-center text-primary hover:underline">
             <FaArrowLeft className="mr-2" /> Quay lại trang chủ
           </Link>
           <a 
