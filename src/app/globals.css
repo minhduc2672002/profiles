@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 245, 248, 250;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-16;
+  }
+  
+  .card {
+    @apply bg-card rounded-xl shadow-sm p-6 transition-all duration-200;
+  }
+  
+  .card:hover {
+    @apply shadow-md;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-blue-600 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-4 py-2 rounded-md font-medium hover:bg-gray-700 transition-colors;
+  }
+  
+  .heading-xl {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  .heading-md {
+    @apply text-xl md:text-2xl font-bold;
+  }
+  
+  .chatbot-container {
+    @apply fixed bottom-6 right-6 z-50;
+  }
+} 
