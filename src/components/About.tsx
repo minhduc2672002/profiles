@@ -65,8 +65,8 @@ const About = () => {
             
             <p className="text-lg mb-4">
               My experience spans across various technologies such as SQL, Python, Apache Spark, 
-              Hadoop ecosystem, and cloud platforms including AWS and Azure. I am skilled at designing 
-              data warehousing solutions, implementing data quality checks, and automating workflow processes.
+              Apache Kafka, and cloud platforms including GCP and Azure. I am skilled at designing 
+              data warehousing solutions and automating workflow processes.
             </p>
             
             <p className="text-lg mb-6">
