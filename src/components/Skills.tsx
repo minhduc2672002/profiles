@@ -4,7 +4,7 @@ const skillCategories = [
   {
     id: 1,
     name: "Programming Languages",
-    skills: ["Python", "SQL", "Java", "R", "Scala"]
+    skills: ["Python", "SQL"]
   },
   {
     id: 2,
