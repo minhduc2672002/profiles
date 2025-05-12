@@ -12,7 +12,7 @@ const projects = [
       "Automated end-to-end pipelines with Airflow, including email alerts for pipeline failures",
       "Deployed Spark, Kafka, Airflow and Postgres with Docker for easier management and deployment"
     ],
-    githubUrl: "https://github.com/yourusername/real-time-user-behavior"
+    githubUrl: "https://github.com/minhduc2672002/user-view-stream-pipeline"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const projects = [
       "Crawled product images and names with BeautifulSoup, then loaded them into the datalake and BigQuery staging",
       "Transformed staging data to Data Warehouse with DBT and visualized online sales in Looker"
     ],
-    githubUrl: "https://github.com/yourusername/ecommerce-data-pipeline"
+    githubUrl: "https://github.com/minhduc2672002/glamira-people-behavior-DWH"
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const projects = [
       "Automated the pipeline with Airflow for scheduled data processing",
       "Containerized the technologies with Docker for easy deployment"
     ],
-    githubUrl: "https://github.com/yourusername/retail-data-warehouse"
+    githubUrl: "https://github.com/minhduc2672002/DWH_retail_project"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const projects = [
       "Built a pipeline combining vector databases and large language models to generate answers based on the provided data",
       "Built the back-end with FastAPI and the user interface with Streamlit"
     ],
-    githubUrl: "https://github.com/yourusername/document-rag-chatbot"
+    githubUrl: "https://github.com/minhduc2672002/Retrieval-augmented-generation"
   }
 ];
 

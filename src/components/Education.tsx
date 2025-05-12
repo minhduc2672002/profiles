@@ -3,46 +3,50 @@
 const educations = [
   {
     id: 1,
-    degree: "Master of Science in Data Science",
-    institution: "Vietnam National University",
+    degree: "Data Engineering",
+    institution: "Ho Chi Minh City University of Technology and Education (HCMUTE)",
     location: "Ho Chi Minh City, Vietnam",
-    period: "2017 - 2019",
-    description: "Focused on advanced data processing techniques, machine learning algorithms, and statistical analysis. Graduated with honors."
+    period: "Graduate Oct 2024",
+    description: ""
   },
   {
     id: 2,
-    degree: "Bachelor of Engineering in Computer Science",
-    institution: "Hanoi University of Science and Technology",
-    location: "Hanoi, Vietnam",
-    period: "2013 - 2017",
-    description: "Studied computer science fundamentals, algorithm design, database systems, and software engineering principles."
+    degree: "Data Coaching - Big Data",
+    institution: "UniGap Academy",
+    location: "Ho Chi Minh City, Vietnam",
+    period: "May - Nov 2024",
+    description: ""
   }
 ];
 
 const certifications = [
   {
     id: 1,
-    name: "AWS Certified Data Analytics - Specialty",
-    issuer: "Amazon Web Services",
-    year: "2022"
+    name: "SQL (Advanced) Certificate",
+    issuer: "HackerRank",
+    year: "2024",
+    url: "https://www.hackerrank.com/certificates/your-certificate"
   },
   {
     id: 2,
-    name: "Google Professional Data Engineer",
-    issuer: "Google Cloud",
-    year: "2021"
+    name: "Python for Data Science, AI and Development",
+    issuer: "Coursera",
+    year: "2023",
+    url: "https://www.coursera.org/your-certificate"
   },
   {
     id: 3,
-    name: "Databricks Certified Developer - Apache Spark",
-    issuer: "Databricks",
-    year: "2020"
+    name: "Python Project for Data Engineering",
+    issuer: "Coursera",
+    year: "2023",
+    url: "https://www.coursera.org/your-certificate"
   },
   {
     id: 4,
-    name: "Microsoft Certified: Azure Data Engineer Associate",
-    issuer: "Microsoft",
-    year: "2020"
+    name: "TOEIC Certificate",
+    issuer: "IIG Vietnam",
+    year: "2023",
+    url: ""
   }
 ];
 
@@ -68,7 +72,7 @@ const Education = () => {
                     <div className="text-primary font-medium">{edu.institution}</div>
                     <div className="text-gray-600 text-sm">{edu.location}</div>
                   </div>
-                  <p className="text-gray-700 text-sm">{edu.description}</p>
+                  {edu.description && <p className="text-gray-700 text-sm">{edu.description}</p>}
                 </div>
               ))}
             </div>
@@ -82,7 +86,25 @@ const Education = () => {
                   <li key={cert.id} className="py-3 first:pt-0 last:pb-0">
                     <div className="flex justify-between">
                       <div>
-                        <div className="font-semibold">{cert.name}</div>
+                        <div className="font-semibold">
+                          {cert.url ? (
+                            <a 
+                              href={cert.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="hover:text-primary flex items-center"
+                            >
+                              {cert.name}
+                              {cert.url && (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              )}
+                            </a>
+                          ) : (
+                            cert.name
+                          )}
+                        </div>
                         <div className="text-gray-600 text-sm">{cert.issuer}</div>
                       </div>
                       <div className="text-primary font-medium">{cert.year}</div>
@@ -102,7 +124,7 @@ const Education = () => {
                       <span>Professional</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-primary h-2 rounded-full w-4/5"></div>
+                      <div className="bg-primary h-2 rounded-full w-3/5"></div>
                     </div>
                   </div>
                   
