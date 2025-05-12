@@ -58,20 +58,12 @@ const About = () => {
               <span className="text-secondary">Data Engineer</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-6">
-              Experienced Data Engineer with expertise in designing, building, and managing data pipelines, 
-              ETL processes, and big data solutions.
-            </p>
             
             <p className="text-lg mb-4">
-              My experience spans across various technologies such as SQL, Python, Apache Spark, 
-              Apache Kafka, and cloud platforms including GCP and Azure. I am skilled at designing 
-              data warehousing solutions and automating workflow processes.
-            </p>
-            
-            <p className="text-lg mb-6">
-              I am passionate about solving complex data challenges and continuously expanding my technical knowledge. 
-              I believe in creating data solutions that are not only efficient but also maintainable and future-proof.
+              As an aspiring data engineer, I am driven by a strong sense of responsibility and a passion for continuous learning. 
+              In my work experience, I have quickly adapted to new challenges, proactively proposed solutions, and consistently enhanced my technical skills.
+              My goal over the next five years is to become a Senior Data Engineer, specializing in big data technologies, machine learning, and data pipeline optimization. 
+              I am committed to delivering impactful, data-driven solutions that drive efficiency and innovation within organizations.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">

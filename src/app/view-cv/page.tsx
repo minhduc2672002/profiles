@@ -9,6 +9,7 @@ export default function ViewCV() {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
   const basePath = process.env.NODE_ENV === 'production' ? '/profiles' : '';
+  const pdfFileName = encodeURIComponent('[Data_Engineer] - Tran_Minh_Duc.pdf');
 
   return (
     <main className="min-h-screen bg-gray-100 py-16">
@@ -18,7 +19,7 @@ export default function ViewCV() {
             <FaArrowLeft className="mr-2" /> Quay lại trang chủ
           </Link>
           <a 
-            href={`${basePath}/[Data_Engineer] - Tran_Minh_Duc.pdf`}
+            href={`${basePath}/${pdfFileName}`}
             download 
             className="btn-primary inline-flex items-center"
           >
@@ -38,7 +39,7 @@ export default function ViewCV() {
           )}
           
           <iframe
-            src={`${basePath}/[Data_Engineer] - Tran_Minh_Duc.pdf`}
+            src={`${basePath}/${pdfFileName}`}
             className="w-full h-screen"
             onLoad={() => setIsLoading(false)}
             style={{ display: isLoading ? 'none' : 'block' }}
