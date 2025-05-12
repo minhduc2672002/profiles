@@ -9,27 +9,27 @@ const skillCategories = [
   {
     id: 2,
     name: "Big Data Technologies",
-    skills: ["Apache Spark", "Apache Hadoop", "Apache Kafka", "Apache Airflow", "Databricks"]
+    skills: ["Apache Spark", "Apache Kafka", "Apache Airflow", "Databricks"]
   },
   {
     id: 3, 
     name: "Databases",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Cassandra", "Redis", "Snowflake"]
+    skills: ["PostgreSQL", "MySQL", "MongoDB"]
   },
   {
     id: 4,
     name: "Cloud Platforms",
-    skills: ["AWS (S3, Redshift, EMR, Glue)", "Azure (Data Factory, Synapse)", "Google Cloud (BigQuery, Dataflow)"]
+    skills: ["Azure", "Google Cloud"]
   },
   {
     id: 5,
     name: "Data Visualization",
-    skills: ["Tableau", "Power BI", "Looker", "Matplotlib", "Seaborn"]
+    skills: ["Power BI", "Looker"]
   },
   {
     id: 6,
     name: "DevOps & Tools",
-    skills: ["Docker", "Kubernetes", "Git", "Jenkins", "Terraform", "Linux"]
+    skills: ["Docker", "Kubernetes", "Git"]
   }
 ];
 
